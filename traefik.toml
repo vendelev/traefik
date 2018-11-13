@@ -1,0 +1,18 @@
+debug = false
+
+logLevel = "DEBUG"
+defaultEntryPoints = ["https","http"] #точки входа
+insecureSkipVerify = true  #принимать самоподписаные сертификаты
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "docker.local"
+watch = true
+exposedbydefault = false
