@@ -13,6 +13,7 @@ insecureSkipVerify = true  #принимать самоподписаные се
 
 [docker]
 endpoint = "unix:///var/run/docker.sock"
-domain = "docker.local"
+domain = "test"
 watch = true
-exposedbydefault = false
+exposedByDefault = true
+network = "proxy"
